@@ -2,7 +2,7 @@
 ## 04-visitors
 
 ## bin
-Contains two examples of Mini-Java-programs and the AST representations for these programs. Program
+Contains two examples of Mini-Java programs and the AST representations for these programs. Program
 ```interpreter_example.txt```
 can also be successfully interpreted, for this you will need to run:
 ```
