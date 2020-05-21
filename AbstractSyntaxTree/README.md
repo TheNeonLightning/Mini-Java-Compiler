@@ -20,7 +20,7 @@ To draw with graphviz use:
 ```
 dot -Tpng ASTree.txt -o output_file.txt
 ```
-Where input_file.txt is created by the 
+where ```input_file.txt``` is created by the 
 ```
 ./ASTreeVisitor
 ```
