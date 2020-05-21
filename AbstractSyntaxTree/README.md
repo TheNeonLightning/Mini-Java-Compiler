@@ -16,7 +16,7 @@ sudo apt install graphviz
 ```
 To draw with graphviz use:
 ```
-dot -Tpng ASTree.txt -o output_file.txt
+dot -Tpng ASTree.txt -o output_file.png
 ```
 where ```ASTree.txt``` is created by the 
 ```
