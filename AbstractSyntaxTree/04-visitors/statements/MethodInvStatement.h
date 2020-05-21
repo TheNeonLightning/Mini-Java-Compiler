@@ -1,0 +1,11 @@
+//
+// Created by theneonlightning on 19.05.2020.
+//
+
+#ifndef VISITOR_STATEMENTS_METHODINVSTATEMENT_H_
+#define VISITOR_STATEMENTS_METHODINVSTATEMENT_H_
+
+class MethodInvStatement {
+};
+
+#endif//VISITOR_STATEMENTS_METHODINVSTATEMENT_H_

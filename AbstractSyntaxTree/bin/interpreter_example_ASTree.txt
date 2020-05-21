@@ -1,0 +1,245 @@
+digraph ASTree {
+node [shape = rectangle]
+node0x558c78483bb0[label = "Program"]
+node0x558c784811a0[label = "Main Class
+Identifier: TestClass"]
+node0x558c784811a0->node0x558c78481200
+node0x558c78481200 [label = "local variable declaration"]
+node0x558c78481208 [label = "int"]
+node0x558c78481228 [label = "var1"]
+node0x558c78481200-> node0x558c78481208
+node0x558c78481200-> node0x558c78481228
+node0x558c784811a0->node0x558c784812a0
+node0x558c784812a0 [label = "local variable declaration"]
+node0x558c784812a8 [label = "int"]
+node0x558c784812c8 [label = "var2"]
+node0x558c784812a0-> node0x558c784812a8
+node0x558c784812a0-> node0x558c784812c8
+node0x558c784811a0->node0x558c78481360
+node0x558c78481360 [label = "local variable declaration"]
+node0x558c78481368 [label = "int"]
+node0x558c78481388 [label = "var3"]
+node0x558c78481360-> node0x558c78481368
+node0x558c78481360-> node0x558c78481388
+node0x558c784811a0->node0x558c78481490
+node0x558c78481490 [label = " = "]
+node0x558c78481490-> node0x558c78481450
+node0x558c78481490-> node0x558c78481330
+node0x558c78481450 [label =  "var2"]
+node0x558c78481330 [label =  "10" ]
+node0x558c784811a0->node0x558c78481540
+node0x558c78481540 [label = " = "]
+node0x558c78481540-> node0x558c78481410
+node0x558c78481540-> node0x558c78481300
+node0x558c78481410 [label =  "var3"]
+node0x558c78481300 [label =  "1" ]
+node0x558c784811a0->node0x558c78481710
+node0x558c78481710 [label = " = "]
+node0x558c78481710-> node0x558c78481610
+node0x558c78481710-> node0x558c784816d0
+node0x558c78481610 [label =  "var1"]
+node0x558c784816d0 [label =  " - "]
+node0x558c784816d0-> node0x558c78481650
+node0x558c784816d0-> node0x558c78481690
+node0x558c78481650 [label =  " var2"]
+node0x558c78481690 [label =  " var3"]
+node0x558c784811a0->node0x558c78481840
+node0x558c78481840 [label = "System.out.println"]
+node0x558c78481840-> node0x558c78481800
+node0x558c78481800 [label =  " var1"]
+node0x558c784811a0->node0x558c784819c0
+node0x558c784819c0 [label = "local variable declaration"]
+node0x558c784819c8 [label = "int"]
+node0x558c784819e8 [label = "array"]
+node0x558c784819c0-> node0x558c784819c8
+node0x558c784819c0-> node0x558c784819e8
+node0x558c784811a0->node0x558c78481b90
+node0x558c78481b90 [label = " = "]
+node0x558c78481b90-> node0x558c78481b10
+node0x558c78481b90-> node0x558c784813c0
+node0x558c78481b10 [label =  "array"]
+node0x558c784813c0 [label =  "new int [expr]" ]
+node0x558c784813c0-> node0x558c78481b50
+node0x558c78481b50 [label =  " var1"]
+node0x558c784811a0->node0x558c78481e40
+node0x558c78481e40 [label = " = "]
+node0x558c78481e40-> node0x558c78481db0
+node0x558c78481e40-> node0x558c78481e00
+node0x558c78481db0 [label =  "array[...]"]
+node0x558c78481db0-> node0x558c78481d80
+node0x558c78481d80 [label =  "1" ]
+node0x558c78481e00 [label =  " var2"]
+node0x558c784811a0->node0x558c78482070
+node0x558c78482070 [label = " = "]
+node0x558c78482070-> node0x558c78481fe0
+node0x558c78482070-> node0x558c78482030
+node0x558c78481fe0 [label =  "array[...]"]
+node0x558c78481fe0-> node0x558c78481fb0
+node0x558c78481fb0 [label =  "0" ]
+node0x558c78482030 [label =  " var3"]
+node0x558c784811a0->node0x558c78482370
+node0x558c78482370 [label = "System.out.println"]
+node0x558c78482370-> node0x558c78482330
+node0x558c78482330 [label = "expr[ expr ]" ]
+node0x558c78482330-> node0x558c784822c0
+node0x558c78482330-> node0x558c78482300
+node0x558c784822c0 [label =  " array"]
+node0x558c78482300 [label =  "0" ]
+node0x558c784811a0->node0x558c784825c0
+node0x558c784825c0 [label = "System.out.println"]
+node0x558c784825c0-> node0x558c78482580
+node0x558c78482580 [label = "expr[ expr ]" ]
+node0x558c78482580-> node0x558c78482510
+node0x558c78482580-> node0x558c78482550
+node0x558c78482510 [label =  " array"]
+node0x558c78482550 [label =  "1" ]
+node0x558c784811a0->node0x558c784828d0
+node0x558c784828d0 [label = "System.out.println"]
+node0x558c784828d0-> node0x558c784828a0
+node0x558c784828a0 [label = "expr.length" ]
+node0x558c784828a0-> node0x558c78482860
+node0x558c78482860 [label =  " array"]
+node0x558c784811a0->node0x558c78482be0
+node0x558c78482be0 [label = " = "]
+node0x558c78482be0-> node0x558c78482ae0
+node0x558c78482be0-> node0x558c78482ba0
+node0x558c78482ae0 [label =  "array[...]"]
+node0x558c78482ae0-> node0x558c78482ab0
+node0x558c78482ab0 [label =  "1" ]
+node0x558c78482ba0 [label =  " * " ]
+node0x558c78482ba0-> node0x558c78482b30
+node0x558c78482ba0-> node0x558c78482b70
+node0x558c78482b30 [label =  " var1"]
+node0x558c78482b70 [label =  "4" ]
+node0x558c784811a0->node0x558c78482fa0
+node0x558c78482fa0 [label = "System.out.println"]
+node0x558c78482fa0-> node0x558c78482f60
+node0x558c78482f60 [label = "expr[ expr ]" ]
+node0x558c78482f60-> node0x558c78482ef0
+node0x558c78482f60-> node0x558c78482f30
+node0x558c78482ef0 [label =  " array"]
+node0x558c78482f30 [label =  "1" ]
+node0x558c784811a0->node0x558c784834e0
+node0x558c784834e0 [label = "if (...) {...} else {...} "]
+node0x558c784834e0-> node0x558c784832a0
+node0x558c784834e0-> node0x558c784833c0
+node0x558c784834e0-> node0x558c78483480
+node0x558c784832a0 [label =  " > " ]
+node0x558c784832a0-> node0x558c78483230
+node0x558c784832a0-> node0x558c78483270
+node0x558c78483230 [label = "expr[ expr ]" ]
+node0x558c78483230-> node0x558c784831c0
+node0x558c78483230-> node0x558c78483200
+node0x558c784831c0 [label =  " array"]
+node0x558c78483200 [label =  "1" ]
+node0x558c78483270 [label =  "10" ]
+node0x558c784833c0 [label = "{...}"]
+node0x558c784833c0-> node0x558c78483390
+node0x558c78483390 [label = "System.out.println"]
+node0x558c78483390-> node0x558c78483350
+node0x558c78483350 [label = "expr[ expr ]" ]
+node0x558c78483350-> node0x558c784832e0
+node0x558c78483350-> node0x558c78483320
+node0x558c784832e0 [label =  " array"]
+node0x558c78483320 [label =  "1" ]
+node0x558c78483480 [label = "{...}"]
+node0x558c78483480-> node0x558c78483450
+node0x558c78483450 [label = "System.out.println"]
+node0x558c78483450-> node0x558c78483420
+node0x558c78483420 [label =  "10" ]
+node0x558c784811a0->node0x558c78483c00
+node0x558c78483c00 [label = "if (...) {...}"]
+node0x558c78483c00-> node0x558c784839c0
+node0x558c78483c00-> node0x558c78483c40
+node0x558c784839c0 [label =  " ==  "]
+node0x558c784839c0-> node0x558c784838d0
+node0x558c784839c0-> node0x558c78483980
+node0x558c784838d0 [label = "expr[ expr ]" ]
+node0x558c784838d0-> node0x558c78483860
+node0x558c784838d0-> node0x558c784838a0
+node0x558c78483860 [label =  " array"]
+node0x558c784838a0 [label =  "1" ]
+node0x558c78483980 [label =  " * " ]
+node0x558c78483980-> node0x558c78483910
+node0x558c78483980-> node0x558c78483950
+node0x558c78483910 [label =  " var1"]
+node0x558c78483950 [label =  "4" ]
+node0x558c78483c40 [label = "{...}"]
+node0x558c78483c40-> node0x558c78483a00
+node0x558c78483a00 [label = "local variable declaration"]
+node0x558c78483a08 [label = "int"]
+node0x558c78483a28 [label = "local_var"]
+node0x558c78483a00-> node0x558c78483a08
+node0x558c78483a00-> node0x558c78483a28
+node0x558c78483c40-> node0x558c78483ad0
+node0x558c78483ad0 [label = " = "]
+node0x558c78483ad0-> node0x558c78483a60
+node0x558c78483ad0-> node0x558c78483aa0
+node0x558c78483a60 [label =  "local_var"]
+node0x558c78483aa0 [label =  "-10" ]
+node0x558c78483c40-> node0x558c78483b10
+node0x558c78483b10 [label = "System.out.println"]
+node0x558c78483b10-> node0x558c78483b70
+node0x558c78483b70 [label =  " local_var"]
+node0x558c784811a0->node0x558c78483f30
+node0x558c78483f30 [label = "local variable declaration"]
+node0x558c78483f38 [label = "int"]
+node0x558c78483f58 [label = "index_var"]
+node0x558c78483f30-> node0x558c78483f38
+node0x558c78483f30-> node0x558c78483f58
+node0x558c784811a0->node0x558c78484320
+node0x558c78484320 [label = " = "]
+node0x558c78484320-> node0x558c78483c80
+node0x558c78484320-> node0x558c78483b40
+node0x558c78483c80 [label =  "index_var"]
+node0x558c78483b40 [label =  "0" ]
+node0x558c784811a0->node0x558c78484610
+node0x558c78484610 [label = "System.out.println"]
+node0x558c78484610-> node0x558c784845d0
+node0x558c784845d0 [label =  " var2"]
+node0x558c784811a0->node0x558c78484d60
+node0x558c78484d60 [label = "while"]
+node0x558c78484d60-> node0x558c78484ab0
+node0x558c78484d60-> node0x558c78484cf0
+node0x558c78484ab0 [label =  " < " ]
+node0x558c78484ab0-> node0x558c78484a30
+node0x558c78484ab0-> node0x558c78484a70
+node0x558c78484a30 [label =  " index_var"]
+node0x558c78484a70 [label =  " var2"]
+node0x558c78484cf0 [label = "{...}"]
+node0x558c78484cf0-> node0x558c78484b30
+node0x558c78484b30 [label = "System.out.println"]
+node0x558c78484b30-> node0x558c78484af0
+node0x558c78484af0 [label =  " index_var"]
+node0x558c78484cf0-> node0x558c78484c50
+node0x558c78484c50 [label = " = "]
+node0x558c78484c50-> node0x558c78484b60
+node0x558c78484c50-> node0x558c78484c10
+node0x558c78484b60 [label =  "index_var"]
+node0x558c78484c10 [label = " + " ]
+node0x558c78484c10-> node0x558c78484ba0
+node0x558c78484c10-> node0x558c78484be0
+node0x558c78484ba0 [label =  " index_var"]
+node0x558c78484be0 [label =  "1" ]
+node0x558c784811a0->node0x558c78484cc0
+node0x558c78484cc0 [label = "System.out.println"]
+node0x558c78484cc0-> node0x558c78485050
+node0x558c78485050 [label =  " index_var"]
+node0x558c784811a0->node0x558c78484c90
+node0x558c78484c90 [label = "assert(...) "]
+node0x558c78484c90-> node0x558c78485560
+node0x558c78485560 [label =  " ==  "]
+node0x558c78485560-> node0x558c784854e0
+node0x558c78485560-> node0x558c78485520
+node0x558c784854e0 [label =  " index_var"]
+node0x558c78485520 [label =  " var2"]
+node0x558c784811a0->node0x558c78485940
+node0x558c78485940 [label = "return"]
+node0x558c78485940-> node0x558c78485900
+node0x558c78485900 [label =  " * " ]
+node0x558c78485900-> node0x558c78485890
+node0x558c78485900-> node0x558c784858d0
+node0x558c78485890 [label =  " index_var"]
+node0x558c784858d0 [label =  "5" ]
+node0x558c78483bb0-> node0x558c784811a0
+}

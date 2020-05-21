@@ -1,4 +1,4 @@
-# Install script for directory: /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers
+# Install script for directory: /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter
+CMAKE_SOURCE_DIR = /home/theneonlightning/compilers/Mini-Java-Compiler
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter
+CMAKE_BINARY_DIR = /home/theneonlightning/compilers/Mini-Java-Compiler
 
 # Include any dependencies generated for this target.
 include 02-parsers/CMakeFiles/ParserExample.dir/depend.make
@@ -58,28 +58,28 @@ include 02-parsers/CMakeFiles/ParserExample.dir/progress.make
 include 02-parsers/CMakeFiles/ParserExample.dir/flags.make
 
 02-parsers/parser.cpp: 02-parsers/parser.y
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BISON][MyParser] Building parser with bison 3.5.1"
-	cd /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers && /usr/bin/bison --defines=/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/parser.hh -o /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/parser.cpp parser.y
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/theneonlightning/compilers/Mini-Java-Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BISON][MyParser] Building parser with bison 3.5.1"
+	cd /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers && /usr/bin/bison --defines=/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/parser.hh -o /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/parser.cpp parser.y
 
 02-parsers/parser.hh: 02-parsers/parser.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate 02-parsers/parser.hh
 
 02-parsers/scanner.cpp: 02-parsers/scanner.l
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "[FLEX][MyScanner] Building scanner with flex 2.6.4"
-	cd /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers && /usr/bin/flex -o/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/scanner.cpp scanner.l
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/theneonlightning/compilers/Mini-Java-Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "[FLEX][MyScanner] Building scanner with flex 2.6.4"
+	cd /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers && /usr/bin/flex -o/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/scanner.cpp scanner.l
 
 02-parsers/CMakeFiles/ParserExample.dir/main.cpp.o: 02-parsers/CMakeFiles/ParserExample.dir/flags.make
 02-parsers/CMakeFiles/ParserExample.dir/main.cpp.o: 02-parsers/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object 02-parsers/CMakeFiles/ParserExample.dir/main.cpp.o"
-	cd /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ParserExample.dir/main.cpp.o -c /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theneonlightning/compilers/Mini-Java-Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object 02-parsers/CMakeFiles/ParserExample.dir/main.cpp.o"
+	cd /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ParserExample.dir/main.cpp.o -c /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/main.cpp
 
 02-parsers/CMakeFiles/ParserExample.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParserExample.dir/main.cpp.i"
-	cd /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/main.cpp > CMakeFiles/ParserExample.dir/main.cpp.i
+	cd /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/main.cpp > CMakeFiles/ParserExample.dir/main.cpp.i
 
 02-parsers/CMakeFiles/ParserExample.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParserExample.dir/main.cpp.s"
-	cd /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/main.cpp -o CMakeFiles/ParserExample.dir/main.cpp.s
+	cd /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/main.cpp -o CMakeFiles/ParserExample.dir/main.cpp.s
 
 02-parsers/CMakeFiles/ParserExample.dir/main.cpp.o.requires:
 
@@ -94,16 +94,16 @@ include 02-parsers/CMakeFiles/ParserExample.dir/flags.make
 
 02-parsers/CMakeFiles/ParserExample.dir/driver.cpp.o: 02-parsers/CMakeFiles/ParserExample.dir/flags.make
 02-parsers/CMakeFiles/ParserExample.dir/driver.cpp.o: 02-parsers/driver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object 02-parsers/CMakeFiles/ParserExample.dir/driver.cpp.o"
-	cd /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ParserExample.dir/driver.cpp.o -c /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/driver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theneonlightning/compilers/Mini-Java-Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object 02-parsers/CMakeFiles/ParserExample.dir/driver.cpp.o"
+	cd /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ParserExample.dir/driver.cpp.o -c /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/driver.cpp
 
 02-parsers/CMakeFiles/ParserExample.dir/driver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParserExample.dir/driver.cpp.i"
-	cd /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/driver.cpp > CMakeFiles/ParserExample.dir/driver.cpp.i
+	cd /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/driver.cpp > CMakeFiles/ParserExample.dir/driver.cpp.i
 
 02-parsers/CMakeFiles/ParserExample.dir/driver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParserExample.dir/driver.cpp.s"
-	cd /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/driver.cpp -o CMakeFiles/ParserExample.dir/driver.cpp.s
+	cd /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/driver.cpp -o CMakeFiles/ParserExample.dir/driver.cpp.s
 
 02-parsers/CMakeFiles/ParserExample.dir/driver.cpp.o.requires:
 
@@ -118,16 +118,16 @@ include 02-parsers/CMakeFiles/ParserExample.dir/flags.make
 
 02-parsers/CMakeFiles/ParserExample.dir/parser.cpp.o: 02-parsers/CMakeFiles/ParserExample.dir/flags.make
 02-parsers/CMakeFiles/ParserExample.dir/parser.cpp.o: 02-parsers/parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object 02-parsers/CMakeFiles/ParserExample.dir/parser.cpp.o"
-	cd /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ParserExample.dir/parser.cpp.o -c /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theneonlightning/compilers/Mini-Java-Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object 02-parsers/CMakeFiles/ParserExample.dir/parser.cpp.o"
+	cd /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ParserExample.dir/parser.cpp.o -c /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/parser.cpp
 
 02-parsers/CMakeFiles/ParserExample.dir/parser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParserExample.dir/parser.cpp.i"
-	cd /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/parser.cpp > CMakeFiles/ParserExample.dir/parser.cpp.i
+	cd /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/parser.cpp > CMakeFiles/ParserExample.dir/parser.cpp.i
 
 02-parsers/CMakeFiles/ParserExample.dir/parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParserExample.dir/parser.cpp.s"
-	cd /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/parser.cpp -o CMakeFiles/ParserExample.dir/parser.cpp.s
+	cd /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/parser.cpp -o CMakeFiles/ParserExample.dir/parser.cpp.s
 
 02-parsers/CMakeFiles/ParserExample.dir/parser.cpp.o.requires:
 
@@ -143,16 +143,16 @@ include 02-parsers/CMakeFiles/ParserExample.dir/flags.make
 02-parsers/CMakeFiles/ParserExample.dir/scanner.cpp.o: 02-parsers/CMakeFiles/ParserExample.dir/flags.make
 02-parsers/CMakeFiles/ParserExample.dir/scanner.cpp.o: 02-parsers/scanner.cpp
 02-parsers/CMakeFiles/ParserExample.dir/scanner.cpp.o: 02-parsers/parser.hh
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object 02-parsers/CMakeFiles/ParserExample.dir/scanner.cpp.o"
-	cd /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ParserExample.dir/scanner.cpp.o -c /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/scanner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/theneonlightning/compilers/Mini-Java-Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object 02-parsers/CMakeFiles/ParserExample.dir/scanner.cpp.o"
+	cd /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ParserExample.dir/scanner.cpp.o -c /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/scanner.cpp
 
 02-parsers/CMakeFiles/ParserExample.dir/scanner.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParserExample.dir/scanner.cpp.i"
-	cd /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/scanner.cpp > CMakeFiles/ParserExample.dir/scanner.cpp.i
+	cd /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/scanner.cpp > CMakeFiles/ParserExample.dir/scanner.cpp.i
 
 02-parsers/CMakeFiles/ParserExample.dir/scanner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParserExample.dir/scanner.cpp.s"
-	cd /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/scanner.cpp -o CMakeFiles/ParserExample.dir/scanner.cpp.s
+	cd /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/scanner.cpp -o CMakeFiles/ParserExample.dir/scanner.cpp.s
 
 02-parsers/CMakeFiles/ParserExample.dir/scanner.cpp.o.requires:
 
@@ -181,8 +181,8 @@ bin/ParserExample: 02-parsers/CMakeFiles/ParserExample.dir/parser.cpp.o
 bin/ParserExample: 02-parsers/CMakeFiles/ParserExample.dir/scanner.cpp.o
 bin/ParserExample: 02-parsers/CMakeFiles/ParserExample.dir/build.make
 bin/ParserExample: 02-parsers/CMakeFiles/ParserExample.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ../bin/ParserExample"
-	cd /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ParserExample.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/theneonlightning/compilers/Mini-Java-Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ../bin/ParserExample"
+	cd /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ParserExample.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 02-parsers/CMakeFiles/ParserExample.dir/build: bin/ParserExample
@@ -197,12 +197,12 @@ bin/ParserExample: 02-parsers/CMakeFiles/ParserExample.dir/link.txt
 .PHONY : 02-parsers/CMakeFiles/ParserExample.dir/requires
 
 02-parsers/CMakeFiles/ParserExample.dir/clean:
-	cd /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers && $(CMAKE_COMMAND) -P CMakeFiles/ParserExample.dir/cmake_clean.cmake
+	cd /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers && $(CMAKE_COMMAND) -P CMakeFiles/ParserExample.dir/cmake_clean.cmake
 .PHONY : 02-parsers/CMakeFiles/ParserExample.dir/clean
 
 02-parsers/CMakeFiles/ParserExample.dir/depend: 02-parsers/parser.cpp
 02-parsers/CMakeFiles/ParserExample.dir/depend: 02-parsers/parser.hh
 02-parsers/CMakeFiles/ParserExample.dir/depend: 02-parsers/scanner.cpp
-	cd /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers /home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/CMakeFiles/ParserExample.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/theneonlightning/compilers/Mini-Java-Compiler && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/theneonlightning/compilers/Mini-Java-Compiler /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers /home/theneonlightning/compilers/Mini-Java-Compiler /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers /home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/CMakeFiles/ParserExample.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : 02-parsers/CMakeFiles/ParserExample.dir/depend
 

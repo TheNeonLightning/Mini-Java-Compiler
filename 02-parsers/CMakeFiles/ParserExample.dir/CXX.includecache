@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/driver.cpp
+/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/driver.cpp
 driver.hh
-/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/driver.hh
+/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/driver.hh
 parser.hh
-/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/parser.hh
+/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/parser.hh
 
-/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/driver.hh
+/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/driver.hh
 map
 -
 string
@@ -20,33 +20,33 @@ string
 fstream
 -
 scanner.h
-/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/scanner.h
+/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/scanner.h
 parser.hh
-/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/parser.hh
+/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/parser.hh
 
-/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/location.hh
+/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/location.hh
 iostream
 -
 string
 -
 
-/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/main.cpp
+/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/main.cpp
 iostream
 -
 driver.hh
 -
 
-/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/parser.cpp
+/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/parser.cpp
 parser.hh
-/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/parser.hh
+/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/parser.hh
 driver.hh
-/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/driver.hh
+/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/driver.hh
 location.hh
-/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/location.hh
+/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/location.hh
 libintl.h
 -
 
-/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/parser.hh
+/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/parser.hh
 string
 -
 cassert
@@ -62,13 +62,13 @@ string
 vector
 -
 location.hh
-/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/location.hh
+/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/location.hh
 typeinfo
 -
 cassert
 -
 
-/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/scanner.cpp
+/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/scanner.cpp
 inttypes.h
 -
 iostream
@@ -96,17 +96,17 @@ string
 iostream
 -
 driver.hh
-/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/driver.hh
+/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/driver.hh
 parser.hh
-/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/parser.hh
+/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/parser.hh
 unistd.h
 -
 
-/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/scanner.h
+/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/scanner.h
 FlexLexer.h
 -
 parser.hh
-/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers/parser.hh
+/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers/parser.hh
 
 02-parsers/driver.hh
 map

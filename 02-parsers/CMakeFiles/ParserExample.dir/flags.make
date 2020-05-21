@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/theneonlightning/compilers/CompilersTasks/SimpleInterpreter/02-parsers 
+CXX_INCLUDES = -I/home/theneonlightning/compilers/Mini-Java-Compiler/02-parsers 
 

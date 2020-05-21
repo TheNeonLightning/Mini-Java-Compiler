@@ -1,0 +1,71 @@
+digraph ASTree {
+node [shape = rectangle]
+node0x55d05ca089d0[label = "Program"]
+node0x55d05ca08310[label = "Main Class
+Identifier: Factorial"]
+node0x55d05ca08310->node0x55d05ca082c0
+node0x55d05ca082c0 [label = "System.out.println"]
+node0x55d05ca082c0-> node0x55d05ca08230
+node0x55d05ca08230 [label =  "expr.ComputeFac( expr )" ]
+node0x55d05ca08230-> node0x55d05ca081a0
+node0x55d05ca081a0 [label =  "new Fac ()" ]
+node0x55d05ca08230-> node0x55d05ca081e0
+node0x55d05ca081e0 [label =  "10" ]
+node0x55d05ca089d0-> node0x55d05ca08310
+node0x55d05ca089d0-> node0x55d05ca08c60
+node0x55d05ca08c60 [label =  "class Fac"]
+node0x55d05ca08c60-> node0x55d05ca08b10
+node0x55d05ca08b10 [label =  "public int ComputeFac(...) {...}"]
+node0x55d05ca08b10-> node0x55d05ca08390
+node0x55d05ca08390 [label =  "int num"]
+node0x55d05ca08b10-> node0x55d05ca084a0
+node0x55d05ca084a0 [label = "assert(...) "]
+node0x55d05ca084a0-> node0x55d05ca08460
+node0x55d05ca08460 [label =  " > " ]
+node0x55d05ca08460-> node0x55d05ca083f0
+node0x55d05ca08460-> node0x55d05ca08430
+node0x55d05ca083f0 [label =  " num"]
+node0x55d05ca08430 [label =  "-1" ]
+node0x55d05ca08b10-> node0x55d05ca08550
+node0x55d05ca08550 [label = "local variable declaration"]
+node0x55d05ca08558 [label = "int"]
+node0x55d05ca08578 [label = "num_aux"]
+node0x55d05ca08550-> node0x55d05ca08558
+node0x55d05ca08550-> node0x55d05ca08578
+node0x55d05ca08b10-> node0x55d05ca08980
+node0x55d05ca08980 [label = "if (...) {...} else {...} "]
+node0x55d05ca08980-> node0x55d05ca08650
+node0x55d05ca08980-> node0x55d05ca08700
+node0x55d05ca08980-> node0x55d05ca08940
+node0x55d05ca08650 [label =  " ==  "]
+node0x55d05ca08650-> node0x55d05ca08610
+node0x55d05ca08650-> node0x55d05ca085b0
+node0x55d05ca08610 [label =  " num"]
+node0x55d05ca085b0 [label =  "0" ]
+node0x55d05ca08700 [label = " = "]
+node0x55d05ca08700-> node0x55d05ca08690
+node0x55d05ca08700-> node0x55d05ca086d0
+node0x55d05ca08690 [label =  "num_aux"]
+node0x55d05ca086d0 [label =  "1" ]
+node0x55d05ca08940 [label = " = "]
+node0x55d05ca08940-> node0x55d05ca08740
+node0x55d05ca08940-> node0x55d05ca08900
+node0x55d05ca08740 [label =  "num_aux"]
+node0x55d05ca08900 [label =  " * " ]
+node0x55d05ca08900-> node0x55d05ca08780
+node0x55d05ca08900-> node0x55d05ca08870
+node0x55d05ca08780 [label =  " num"]
+node0x55d05ca08870 [label =  "expr.ComputeFac( expr )" ]
+node0x55d05ca08870-> node0x55d05ca084d0
+node0x55d05ca084d0 [label =  "this" ]
+node0x55d05ca08870-> node0x55d05ca08830
+node0x55d05ca08830 [label =  " - "]
+node0x55d05ca08830-> node0x55d05ca087c0
+node0x55d05ca08830-> node0x55d05ca08800
+node0x55d05ca087c0 [label =  " num"]
+node0x55d05ca08800 [label =  "1" ]
+node0x55d05ca08b10-> node0x55d05ca085e0
+node0x55d05ca085e0 [label = "return"]
+node0x55d05ca085e0-> node0x55d05ca08a60
+node0x55d05ca08a60 [label =  " num_aux"]
+}
