@@ -451,60 +451,62 @@ namespace yy {
       // integer
       char dummy1[sizeof (int)];
 
+      // type
+      char dummy2[sizeof (std::pair<std::string, bool>)];
+
       // class_declaration
-      char dummy2[sizeof (std::shared_ptr<ClassDeclaration>)];
+      char dummy3[sizeof (std::shared_ptr<ClassDeclaration>)];
 
       // declaration
       // method_declaration
       // variable_declaration
-      char dummy3[sizeof (std::shared_ptr<Declaration>)];
+      char dummy4[sizeof (std::shared_ptr<Declaration>)];
 
       // expr
-      char dummy4[sizeof (std::shared_ptr<Expression>)];
+      char dummy5[sizeof (std::shared_ptr<Expression>)];
 
       // lvalue
-      char dummy5[sizeof (std::shared_ptr<LValue>)];
+      char dummy6[sizeof (std::shared_ptr<LValue>)];
 
       // main_class
-      char dummy6[sizeof (std::shared_ptr<MainClass>)];
+      char dummy7[sizeof (std::shared_ptr<MainClass>)];
 
       // method_invocation
-      char dummy7[sizeof (std::shared_ptr<MethodInvExpression>)];
+      char dummy8[sizeof (std::shared_ptr<MethodInvExpression>)];
 
       // unit
       // program
-      char dummy8[sizeof (std::shared_ptr<Program>)];
+      char dummy9[sizeof (std::shared_ptr<Program>)];
 
       // statement
       // local_variable_declaration
-      char dummy9[sizeof (std::shared_ptr<Statement>)];
+      char dummy10[sizeof (std::shared_ptr<Statement>)];
 
       // argument
-      char dummy10[sizeof (std::shared_ptr<VarDeclaration>)];
+      char dummy11[sizeof (std::shared_ptr<VarDeclaration>)];
 
       // "identifier"
-      // type
       // simple_type
       // array_type
       // type_identifier
       // logic
-      char dummy11[sizeof (std::string)];
+      char dummy12[sizeof (std::string)];
 
       // class_declarations
-      char dummy12[sizeof (std::vector<std::shared_ptr<ClassDeclaration>>)];
+      char dummy13[sizeof (std::vector<std::shared_ptr<ClassDeclaration>>)];
 
       // declarations
-      char dummy13[sizeof (std::vector<std::shared_ptr<Declaration>>)];
+      char dummy14[sizeof (std::vector<std::shared_ptr<Declaration>>)];
 
       // expressions
-      char dummy14[sizeof (std::vector<std::shared_ptr<Expression>>)];
+      char dummy15[sizeof (std::vector<std::shared_ptr<Expression>>)];
 
       // statements
-      char dummy15[sizeof (std::vector<std::shared_ptr<Statement>>)];
+      char dummy16[sizeof (std::vector<std::shared_ptr<Statement>>)];
 
       // formals
       // arguments
-      char dummy16[sizeof (std::vector<std::shared_ptr<VarDeclaration>>)];
+      char dummy17[sizeof (std::vector<std::shared_ptr<VarDeclaration>>)];
     };
 
     /// The size of the largest semantic type.
@@ -656,6 +658,19 @@ namespace yy {
       {}
 #else
       basic_symbol (typename Base::kind_type t, const int& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, std::pair<std::string, bool>&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const std::pair<std::string, bool>& v, const location_type& l)
         : Base (t)
         , value (v)
         , location (l)
@@ -884,6 +899,10 @@ switch (yytype)
         value.template destroy< int > ();
         break;
 
+      case 58: // type
+        value.template destroy< std::pair<std::string, bool> > ();
+        break;
+
       case 50: // class_declaration
         value.template destroy< std::shared_ptr<ClassDeclaration> > ();
         break;
@@ -925,7 +944,6 @@ switch (yytype)
         break;
 
       case 43: // "identifier"
-      case 58: // type
       case 59: // simple_type
       case 60: // array_type
       case 61: // type_identifier
@@ -2131,6 +2149,10 @@ switch (yytype)
         value.move< int > (std::move (that.value));
         break;
 
+      case 58: // type
+        value.move< std::pair<std::string, bool> > (std::move (that.value));
+        break;
+
       case 50: // class_declaration
         value.move< std::shared_ptr<ClassDeclaration> > (std::move (that.value));
         break;
@@ -2172,7 +2194,6 @@ switch (yytype)
         break;
 
       case 43: // "identifier"
-      case 58: // type
       case 59: // simple_type
       case 60: // array_type
       case 61: // type_identifier
@@ -2221,6 +2242,10 @@ switch (yytype)
         value.copy< int > (YY_MOVE (that.value));
         break;
 
+      case 58: // type
+        value.copy< std::pair<std::string, bool> > (YY_MOVE (that.value));
+        break;
+
       case 50: // class_declaration
         value.copy< std::shared_ptr<ClassDeclaration> > (YY_MOVE (that.value));
         break;
@@ -2262,7 +2287,6 @@ switch (yytype)
         break;
 
       case 43: // "identifier"
-      case 58: // type
       case 59: // simple_type
       case 60: // array_type
       case 61: // type_identifier
@@ -2318,6 +2342,10 @@ switch (yytype)
         value.move< int > (YY_MOVE (s.value));
         break;
 
+      case 58: // type
+        value.move< std::pair<std::string, bool> > (YY_MOVE (s.value));
+        break;
+
       case 50: // class_declaration
         value.move< std::shared_ptr<ClassDeclaration> > (YY_MOVE (s.value));
         break;
@@ -2359,7 +2387,6 @@ switch (yytype)
         break;
 
       case 43: // "identifier"
-      case 58: // type
       case 59: // simple_type
       case 60: // array_type
       case 61: // type_identifier
@@ -2443,7 +2470,7 @@ switch (yytype)
   }
 
 } // yy
-#line 2447 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.hh"
+#line 2474 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.hh"
 
 
 

@@ -207,7 +207,7 @@
 %nterm <std::vector<std::shared_ptr<VarDeclaration>>> formals
 %nterm <std::vector<std::shared_ptr<VarDeclaration>>> arguments
 %nterm <std::shared_ptr<VarDeclaration>> argument
-%nterm <std::string> type
+%nterm <std::pair<std::string, bool>> type
 %nterm <std::string> simple_type
 %nterm <std::string> array_type
 %nterm <std::string> type_identifier
@@ -295,8 +295,8 @@ argument:
       type "identifier" { $$ = std::make_shared<VarDeclaration>($1, $2); }
 
 type:
-      simple_type { $$ = $1; }
-    | array_type { $$ = $1; }
+      simple_type { $$ = {$1, false}; }
+    | array_type { $$ = {$1, true}; }
 
 simple_type:
       "int" { $$ = "int"; }
@@ -329,7 +329,7 @@ statement:
 local_variable_declaration:
     variable_declaration {
         auto vd = static_cast<VarDeclaration*>($1.get());
-        $$ = std::make_shared<LocVarDecStatement>(vd->type, vd->identifier);
+        $$ = std::make_shared<LocVarDecStatement>(vd->type, vd->is_array, vd->identifier);
     }
 
 method_invocation:

@@ -66,7 +66,30 @@ add_executable(
         program/Program.cpp
         visitors/PrintVisitor.cpp
         visitors/Interpreter.cpp
-)
+        objects/Boolean.cpp
+        objects/Boolean.h
+        objects/Class.cpp
+        objects/Class.h
+        objects/Integer.cpp
+        objects/Integer.h
+        objects/MethodType.cpp
+        objects/MethodType.h
+        objects/Object.cpp
+        objects/Object.h
+        objects/UninitializedObject.cpp
+        objects/UninitializedObject.h
+        symbol_table/Symbol.cpp
+        symbol_table/Symbol.h
+        symbol_table/ScopeLayer.cpp
+        symbol_table/ScopeLayer.h
+        symbol_table/ScopeLayerTree.cpp
+        symbol_table/ScopeLayerTree.h
+        visitors/SymbolTreeVisitor.cpp
+        visitors/SymbolTreeVisitor.h
+        visitors/TypesChecker.cpp
+        visitors/TypesChecker.h
+        visitors/TypesInterpreter.cpp
+        visitors/TypesInterpreter.h)
 
 target_include_directories(
         ASTreeVisitor PRIVATE ${ASTreeVisitor_SOURCE_DIR}

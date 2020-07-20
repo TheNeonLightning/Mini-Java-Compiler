@@ -3,13 +3,14 @@
 
 #include "visitors/PrintVisitor.h"
 #include "visitors/Interpreter.h"
+#include "visitors/SymbolTreeVisitor.h"
+#include "visitors/TypesChecker.h"
+#include "visitors/TypesInterpreter.h"
 
 Driver::Driver() :
     trace_parsing(false),
     trace_scanning(false),
     scanner(*this), parser(scanner, *this) {
-    variables["one"] = 1;
-    variables["two"] = 2;
 }
 
 
@@ -39,8 +40,19 @@ void Driver::PrintASTree(const std::string &filename) {
 }
 
 void Driver::Execute() {
-  Interpreter interpreter;
-  interpreter.Visit(program.get());
+
+  SymbolTreeVisitor symbol_tree_visitor;
+  symbol_tree_visitor.Visit(program.get());
+  ScopeLayer* root = symbol_tree_visitor.tree.root;
+
+  TypesChecker types_checker(root);
+  types_checker.Visit(program.get());
+
+  TypesInterpreter types_interpreter(root);
+  types_interpreter.Visit(program.get());
+
+  symbol_tree_visitor.tree.Free(root);
+
 }
 
 void Driver::scan_end()

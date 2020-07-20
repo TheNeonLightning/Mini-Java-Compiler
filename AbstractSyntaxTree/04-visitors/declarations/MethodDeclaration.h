@@ -20,10 +20,11 @@ class MethodDeclaration : public Declaration {
 
   std::string type;
   std::string identifier;
+  bool is_array;
   std::vector<std::shared_ptr<VarDeclaration>> var_declarations;
   std::vector<std::shared_ptr<Statement>> statements;
 
-  MethodDeclaration(const std::string& type, const std::string& identifier,
+  MethodDeclaration(std::pair<std::string, bool> type, const std::string& identifier,
                     std::vector<std::shared_ptr<VarDeclaration>>
                         var_declarations,
                     std::vector<std::shared_ptr<Statement>> statements);

@@ -4,11 +4,11 @@
 
 #include "MethodDeclaration.h"
 
-MethodDeclaration::MethodDeclaration(const std::string &type,
-                   const std::string &id,
+MethodDeclaration::MethodDeclaration(const std::pair<std::string, bool> type,
+                   const std::string& id,
                    std::vector<std::shared_ptr<VarDeclaration>> var_declarations,
                    std::vector<std::shared_ptr<Statement>> statements):
-  type(type), identifier(id), var_declarations(var_declarations),
+  type(type.first), identifier(id), is_array(type.second), var_declarations(var_declarations),
   statements(statements) {}
 
 

@@ -203,7 +203,7 @@
     argument <std::shared_ptr<VarDeclaration>> (57)
         on left: 19
         on right: 17 18
-    type <std::string> (58)
+    type <std::pair<std::string, bool>> (58)
         on left: 20 21
         on right: 12 13 14 15 19
     simple_type <std::string> (59)

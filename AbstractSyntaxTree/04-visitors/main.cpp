@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
         }
 
         driver.parse(argv[1]);
-        driver.PrintASTree("ASTree.txt");
+        // driver.PrintASTree("ASTree.txt");
 
         driver.Execute();
     }

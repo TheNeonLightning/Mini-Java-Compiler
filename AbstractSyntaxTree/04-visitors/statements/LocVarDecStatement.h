@@ -16,8 +16,9 @@ class LocVarDecStatement: public Statement {
 
   std::string type;
   std::string identifier;
+  bool is_array;
 
-  LocVarDecStatement(const std::string& type, const std::string& identifier);
+  LocVarDecStatement(const std::string& type, bool array, const std::string& identifier);
   void Accept(Visitor* visitor) override;
 };
 

@@ -5,8 +5,9 @@
 #include "LocVarDecStatement.h"
 
 LocVarDecStatement::LocVarDecStatement(const std::string &type,
-                                       const std::string &identifie_):
-  type(type), identifier(identifie_) {}
+                                       bool is_array,
+                                       const std::string &identifier_):
+  type(type), identifier(identifier_), is_array(is_array)  {}
 
 void LocVarDecStatement::Accept(Visitor *visitor) {
   visitor->Visit(this);

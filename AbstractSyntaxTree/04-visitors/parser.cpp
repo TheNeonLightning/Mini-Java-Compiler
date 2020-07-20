@@ -305,6 +305,10 @@ namespace yy {
         value.YY_MOVE_OR_COPY< int > (YY_MOVE (that.value));
         break;
 
+      case 58: // type
+        value.YY_MOVE_OR_COPY< std::pair<std::string, bool> > (YY_MOVE (that.value));
+        break;
+
       case 50: // class_declaration
         value.YY_MOVE_OR_COPY< std::shared_ptr<ClassDeclaration> > (YY_MOVE (that.value));
         break;
@@ -346,7 +350,6 @@ namespace yy {
         break;
 
       case 43: // "identifier"
-      case 58: // type
       case 59: // simple_type
       case 60: // array_type
       case 61: // type_identifier
@@ -395,6 +398,10 @@ namespace yy {
         value.move< int > (YY_MOVE (that.value));
         break;
 
+      case 58: // type
+        value.move< std::pair<std::string, bool> > (YY_MOVE (that.value));
+        break;
+
       case 50: // class_declaration
         value.move< std::shared_ptr<ClassDeclaration> > (YY_MOVE (that.value));
         break;
@@ -436,7 +443,6 @@ namespace yy {
         break;
 
       case 43: // "identifier"
-      case 58: // type
       case 59: // simple_type
       case 60: // array_type
       case 61: // type_identifier
@@ -485,6 +491,10 @@ namespace yy {
         value.copy< int > (that.value);
         break;
 
+      case 58: // type
+        value.copy< std::pair<std::string, bool> > (that.value);
+        break;
+
       case 50: // class_declaration
         value.copy< std::shared_ptr<ClassDeclaration> > (that.value);
         break;
@@ -526,7 +536,6 @@ namespace yy {
         break;
 
       case 43: // "identifier"
-      case 58: // type
       case 59: // simple_type
       case 60: // array_type
       case 61: // type_identifier
@@ -574,6 +583,10 @@ namespace yy {
         value.move< int > (that.value);
         break;
 
+      case 58: // type
+        value.move< std::pair<std::string, bool> > (that.value);
+        break;
+
       case 50: // class_declaration
         value.move< std::shared_ptr<ClassDeclaration> > (that.value);
         break;
@@ -615,7 +628,6 @@ namespace yy {
         break;
 
       case 43: // "identifier"
-      case 58: // type
       case 59: // simple_type
       case 60: // array_type
       case 61: // type_identifier
@@ -899,6 +911,10 @@ namespace yy {
         yylhs.value.emplace< int > ();
         break;
 
+      case 58: // type
+        yylhs.value.emplace< std::pair<std::string, bool> > ();
+        break;
+
       case 50: // class_declaration
         yylhs.value.emplace< std::shared_ptr<ClassDeclaration> > ();
         break;
@@ -940,7 +956,6 @@ namespace yy {
         break;
 
       case 43: // "identifier"
-      case 58: // type
       case 59: // simple_type
       case 60: // array_type
       case 61: // type_identifier
@@ -992,444 +1007,444 @@ namespace yy {
   case 2:
 #line 236 "parser.y"
               { yylhs.value.as < std::shared_ptr<Program> > () = yystack_[0].value.as < std::shared_ptr<Program> > (); driver.program = yystack_[0].value.as < std::shared_ptr<Program> > (); }
-#line 996 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1011 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 3:
 #line 239 "parser.y"
                                   { yylhs.value.as < std::shared_ptr<Program> > () = std::make_shared<Program>(yystack_[1].value.as < std::shared_ptr<MainClass> > (), yystack_[0].value.as < std::vector<std::shared_ptr<ClassDeclaration>> > ()); }
-#line 1002 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1017 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 4:
 #line 246 "parser.y"
         { yylhs.value.as < std::shared_ptr<MainClass> > () = std::make_shared<MainClass>(yystack_[11].value.as < std::string > (), yystack_[2].value.as < std::vector<std::shared_ptr<Statement>> > ()); }
-#line 1008 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1023 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 5:
 #line 249 "parser.y"
              { yylhs.value.as < std::vector<std::shared_ptr<ClassDeclaration>> > () = std::vector<std::shared_ptr<ClassDeclaration>>(); }
-#line 1014 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1029 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 6:
 #line 250 "parser.y"
                                            { yystack_[1].value.as < std::vector<std::shared_ptr<ClassDeclaration>> > ().push_back(yystack_[0].value.as < std::shared_ptr<ClassDeclaration> > ()); yylhs.value.as < std::vector<std::shared_ptr<ClassDeclaration>> > () = yystack_[1].value.as < std::vector<std::shared_ptr<ClassDeclaration>> > (); }
-#line 1020 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1035 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 7:
 #line 255 "parser.y"
           { yylhs.value.as < std::shared_ptr<ClassDeclaration> > () = std::make_shared<ClassDeclaration>(yystack_[3].value.as < std::string > (), "", yystack_[1].value.as < std::vector<std::shared_ptr<Declaration>> > ()); }
-#line 1026 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1041 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 8:
 #line 258 "parser.y"
           { yylhs.value.as < std::shared_ptr<ClassDeclaration> > () = std::make_shared<ClassDeclaration>(yystack_[5].value.as < std::string > (), yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::vector<std::shared_ptr<Declaration>> > ()); }
-#line 1032 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1047 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 9:
 #line 261 "parser.y"
              { yylhs.value.as < std::vector<std::shared_ptr<Declaration>> > () = std::vector<std::shared_ptr<Declaration>>(); }
-#line 1038 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1053 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 10:
 #line 262 "parser.y"
                                { yystack_[1].value.as < std::vector<std::shared_ptr<Declaration>> > ().push_back(yystack_[0].value.as < std::shared_ptr<Declaration> > ()); yylhs.value.as < std::vector<std::shared_ptr<Declaration>> > () = yystack_[1].value.as < std::vector<std::shared_ptr<Declaration>> > (); }
-#line 1044 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1059 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 11:
 #line 265 "parser.y"
                            { yylhs.value.as < std::shared_ptr<Declaration> > () = yystack_[0].value.as < std::shared_ptr<Declaration> > (); }
-#line 1050 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1065 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 12:
 #line 266 "parser.y"
                          { yylhs.value.as < std::shared_ptr<Declaration> > () = yystack_[0].value.as < std::shared_ptr<Declaration> > (); }
-#line 1056 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1071 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 13:
 #line 273 "parser.y"
       { yylhs.value.as < std::shared_ptr<Declaration> > () = std::make_shared<MethodDeclaration>
-       (yystack_[6].value.as < std::string > (), yystack_[5].value.as < std::string > (), std::vector<std::shared_ptr<VarDeclaration>>(), yystack_[1].value.as < std::vector<std::shared_ptr<Statement>> > ()); }
-#line 1063 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+       (yystack_[6].value.as < std::pair<std::string, bool> > (), yystack_[5].value.as < std::string > (), std::vector<std::shared_ptr<VarDeclaration>>(), yystack_[1].value.as < std::vector<std::shared_ptr<Statement>> > ()); }
+#line 1078 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 14:
 #line 279 "parser.y"
-      { yylhs.value.as < std::shared_ptr<Declaration> > () = std::make_shared<MethodDeclaration>(yystack_[7].value.as < std::string > (), yystack_[6].value.as < std::string > (), yystack_[4].value.as < std::vector<std::shared_ptr<VarDeclaration>> > (), yystack_[1].value.as < std::vector<std::shared_ptr<Statement>> > ()); }
-#line 1069 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+      { yylhs.value.as < std::shared_ptr<Declaration> > () = std::make_shared<MethodDeclaration>(yystack_[7].value.as < std::pair<std::string, bool> > (), yystack_[6].value.as < std::string > (), yystack_[4].value.as < std::vector<std::shared_ptr<VarDeclaration>> > (), yystack_[1].value.as < std::vector<std::shared_ptr<Statement>> > ()); }
+#line 1084 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 15:
 #line 282 "parser.y"
-                            { yylhs.value.as < std::shared_ptr<Declaration> > () = std::make_shared<VarDeclaration>(yystack_[2].value.as < std::string > (), yystack_[1].value.as < std::string > ()); }
-#line 1075 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+                            { yylhs.value.as < std::shared_ptr<Declaration> > () = std::make_shared<VarDeclaration>(yystack_[2].value.as < std::pair<std::string, bool> > (), yystack_[1].value.as < std::string > ()); }
+#line 1090 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 16:
 #line 286 "parser.y"
-      { yystack_[0].value.as < std::vector<std::shared_ptr<VarDeclaration>> > ().insert(yystack_[0].value.as < std::vector<std::shared_ptr<VarDeclaration>> > ().begin(), std::make_shared<VarDeclaration>(yystack_[2].value.as < std::string > (), yystack_[1].value.as < std::string > ()));
+      { yystack_[0].value.as < std::vector<std::shared_ptr<VarDeclaration>> > ().insert(yystack_[0].value.as < std::vector<std::shared_ptr<VarDeclaration>> > ().begin(), std::make_shared<VarDeclaration>(yystack_[2].value.as < std::pair<std::string, bool> > (), yystack_[1].value.as < std::string > ()));
         yylhs.value.as < std::vector<std::shared_ptr<VarDeclaration>> > () = yystack_[0].value.as < std::vector<std::shared_ptr<VarDeclaration>> > (); }
-#line 1082 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1097 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 17:
 #line 290 "parser.y"
              { yylhs.value.as < std::vector<std::shared_ptr<VarDeclaration>> > () = std::vector<std::shared_ptr<VarDeclaration>>(); }
-#line 1088 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1103 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 18:
 #line 291 "parser.y"
                { yylhs.value.as < std::vector<std::shared_ptr<VarDeclaration>> > ().push_back(yystack_[0].value.as < std::shared_ptr<VarDeclaration> > ()); }
-#line 1094 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1109 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 19:
 #line 292 "parser.y"
                              { yystack_[2].value.as < std::vector<std::shared_ptr<VarDeclaration>> > ().push_back(yystack_[0].value.as < std::shared_ptr<VarDeclaration> > ()); yylhs.value.as < std::vector<std::shared_ptr<VarDeclaration>> > () = yystack_[2].value.as < std::vector<std::shared_ptr<VarDeclaration>> > (); }
-#line 1100 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1115 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 20:
 #line 295 "parser.y"
-                        { yylhs.value.as < std::shared_ptr<VarDeclaration> > () = std::make_shared<VarDeclaration>(yystack_[1].value.as < std::string > (), yystack_[0].value.as < std::string > ()); }
-#line 1106 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+                        { yylhs.value.as < std::shared_ptr<VarDeclaration> > () = std::make_shared<VarDeclaration>(yystack_[1].value.as < std::pair<std::string, bool> > (), yystack_[0].value.as < std::string > ()); }
+#line 1121 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 21:
 #line 298 "parser.y"
-                  { yylhs.value.as < std::string > () = yystack_[0].value.as < std::string > (); }
-#line 1112 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+                  { yylhs.value.as < std::pair<std::string, bool> > () = {yystack_[0].value.as < std::string > (), false}; }
+#line 1127 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 22:
 #line 299 "parser.y"
-                 { yylhs.value.as < std::string > () = yystack_[0].value.as < std::string > (); }
-#line 1118 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+                 { yylhs.value.as < std::pair<std::string, bool> > () = {yystack_[0].value.as < std::string > (), true}; }
+#line 1133 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 23:
 #line 302 "parser.y"
             { yylhs.value.as < std::string > () = "int"; }
-#line 1124 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1139 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 24:
 #line 303 "parser.y"
                 { yylhs.value.as < std::string > () = "boolean"; }
-#line 1130 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1145 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 25:
 #line 304 "parser.y"
              { yylhs.value.as < std::string > () = "void"; }
-#line 1136 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1151 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 26:
 #line 305 "parser.y"
                       { yylhs.value.as < std::string > () = yystack_[0].value.as < std::string > (); }
-#line 1142 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1157 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 27:
 #line 308 "parser.y"
                           { yylhs.value.as < std::string > () = yystack_[2].value.as < std::string > (); }
-#line 1148 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1163 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 28:
 #line 311 "parser.y"
                    { yylhs.value.as < std::string > () = yystack_[0].value.as < std::string > (); }
-#line 1154 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1169 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 29:
 #line 314 "parser.y"
              { yylhs.value.as < std::vector<std::shared_ptr<Statement>> > () = std::vector<std::shared_ptr<Statement>>(); }
-#line 1160 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1175 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 30:
 #line 315 "parser.y"
                            { yystack_[1].value.as < std::vector<std::shared_ptr<Statement>> > ().push_back(yystack_[0].value.as < std::shared_ptr<Statement> > ()); yylhs.value.as < std::vector<std::shared_ptr<Statement>> > () = yystack_[1].value.as < std::vector<std::shared_ptr<Statement>> > (); }
-#line 1166 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1181 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 31:
 #line 318 "parser.y"
                                 { yylhs.value.as < std::shared_ptr<Statement> > () =  std::make_shared<AssertStatement>(yystack_[2].value.as < std::shared_ptr<Expression> > ()); }
-#line 1172 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1187 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 32:
 #line 319 "parser.y"
                                  { yylhs.value.as < std::shared_ptr<Statement> > () = yystack_[0].value.as < std::shared_ptr<Statement> > (); }
-#line 1178 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1193 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 33:
 #line 320 "parser.y"
                           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<BracesStatement>(yystack_[1].value.as < std::vector<std::shared_ptr<Statement>> > ()); }
-#line 1184 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1199 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 34:
 #line 321 "parser.y"
                                   { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<IfStatement>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Statement> > ()); }
-#line 1190 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1205 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 35:
 #line 322 "parser.y"
                                                    { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<IfElseStatement>(yystack_[4].value.as < std::shared_ptr<Expression> > (), yystack_[2].value.as < std::shared_ptr<Statement> > (), yystack_[0].value.as < std::shared_ptr<Statement> > ()); }
-#line 1196 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1211 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 36:
 #line 323 "parser.y"
                                      { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<WhileStatement>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Statement> > ()); }
-#line 1202 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1217 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 37:
 #line 324 "parser.y"
                                             { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<SOPrintlnStatement>(yystack_[2].value.as < std::shared_ptr<Expression> > ()); }
-#line 1208 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1223 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 38:
 #line 325 "parser.y"
                           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<LValueAssignStatement>(yystack_[3].value.as < std::shared_ptr<LValue> > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
-#line 1214 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1229 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 39:
 #line 326 "parser.y"
                         { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<ReturnStatement>(yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
-#line 1220 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1235 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 40:
 #line 327 "parser.y"
                             { yylhs.value.as < std::shared_ptr<Statement> > () = yystack_[1].value.as < std::shared_ptr<MethodInvExpression> > (); }
-#line 1226 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1241 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 41:
 #line 330 "parser.y"
                          {
         auto vd = static_cast<VarDeclaration*>(yystack_[0].value.as < std::shared_ptr<Declaration> > ().get());
-        yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<LocVarDecStatement>(vd->type, vd->identifier);
+        yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<LocVarDecStatement>(vd->type, vd->is_array, vd->identifier);
     }
-#line 1235 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1250 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 42:
 #line 336 "parser.y"
                                     { yylhs.value.as < std::shared_ptr<MethodInvExpression> > () = std::make_shared<MethodInvExpression>
           (yystack_[4].value.as < std::shared_ptr<Expression> > (), yystack_[2].value.as < std::string > (), std::vector<std::shared_ptr<Expression>>()); }
-#line 1242 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1257 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 43:
 #line 338 "parser.y"
                                                 {
           yylhs.value.as < std::shared_ptr<MethodInvExpression> > () = std::make_shared<MethodInvExpression>(yystack_[5].value.as < std::shared_ptr<Expression> > (), yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::vector<std::shared_ptr<Expression>> > ()); }
-#line 1249 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1264 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 44:
 #line 342 "parser.y"
                    { yylhs.value.as < std::shared_ptr<LValue> > () = std::make_shared<SimpleTypeIdentifier>(yystack_[0].value.as < std::string > ()); }
-#line 1255 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1270 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 45:
 #line 344 "parser.y"
       { yylhs.value.as < std::shared_ptr<LValue> > () = std::make_shared<ArrayIdentifier>(yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
-#line 1261 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1276 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 46:
 #line 347 "parser.y"
              { yylhs.value.as < std::vector<std::shared_ptr<Expression>> > () = std::vector<std::shared_ptr<Expression>>(); }
-#line 1267 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1282 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 47:
 #line 348 "parser.y"
            { yylhs.value.as < std::vector<std::shared_ptr<Expression>> > ().push_back(yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
-#line 1273 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1288 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 48:
 #line 349 "parser.y"
                            { yystack_[2].value.as < std::vector<std::shared_ptr<Expression>> > ().push_back(yystack_[0].value.as < std::shared_ptr<Expression> > ()); yylhs.value.as < std::vector<std::shared_ptr<Expression>> > () = yystack_[2].value.as < std::vector<std::shared_ptr<Expression>> > (); }
-#line 1279 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1294 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 49:
 #line 352 "parser.y"
                      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<AndExpression>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
-#line 1285 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1300 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 50:
 #line 353 "parser.y"
                      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<OrExpression>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
-#line 1291 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1306 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 51:
 #line 354 "parser.y"
                     { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<LessExpression>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
-#line 1297 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1312 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 52:
 #line 355 "parser.y"
                     { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<GreaterExpression>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
-#line 1303 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1318 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 53:
 #line 356 "parser.y"
                      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<IsEqualExpression>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
-#line 1309 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1324 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 54:
 #line 357 "parser.y"
                     { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<AddExpression>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
-#line 1315 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1330 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 55:
 #line 358 "parser.y"
                     { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<SubExpression>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
-#line 1321 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1336 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 56:
 #line 359 "parser.y"
                     { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<MulExpression>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
-#line 1327 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1342 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 57:
 #line 360 "parser.y"
                     { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<DivExpression>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
-#line 1333 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1348 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 58:
 #line 361 "parser.y"
                     { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<ResidueExpression>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
-#line 1339 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1354 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 59:
 #line 362 "parser.y"
                          { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<AccessExpression>(yystack_[3].value.as < std::shared_ptr<Expression> > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
-#line 1345 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1360 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 60:
 #line 363 "parser.y"
                          { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<LengthExpression>(yystack_[2].value.as < std::shared_ptr<Expression> > ()); }
-#line 1351 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1366 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 61:
 #line 364 "parser.y"
                                      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<NewArrayExpression>(yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
-#line 1357 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1372 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 62:
 #line 365 "parser.y"
                                     { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<NewExpression>(yystack_[2].value.as < std::string > ()); }
-#line 1363 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1378 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 63:
 #line 366 "parser.y"
                { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<NegativeExpression>(yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
-#line 1369 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1384 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 64:
 #line 367 "parser.y"
                     { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<ParensExpression>(yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
-#line 1375 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1390 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 65:
 #line 368 "parser.y"
                    { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<IdentifierExpression>(yystack_[0].value.as < std::string > ()); }
-#line 1381 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1396 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 66:
 #line 369 "parser.y"
               { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<IntegerExpression>(yystack_[0].value.as < int > ()); }
-#line 1387 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1402 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 67:
 #line 370 "parser.y"
              { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<ThisExpression>(); }
-#line 1393 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1408 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 68:
 #line 371 "parser.y"
             { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<LogicExpression>(yystack_[0].value.as < std::string > ()); }
-#line 1399 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1414 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 69:
 #line 372 "parser.y"
                         { yylhs.value.as < std::shared_ptr<Expression> > () = yystack_[0].value.as < std::shared_ptr<MethodInvExpression> > (); }
-#line 1405 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1420 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 70:
 #line 375 "parser.y"
              { yylhs.value.as < std::string > () = "true"; }
-#line 1411 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1426 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 71:
 #line 376 "parser.y"
               { yylhs.value.as < std::string > () = "false"; }
-#line 1417 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1432 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 72:
 #line 379 "parser.y"
                { yylhs.value.as < int > () = yystack_[0].value.as < int > (); }
-#line 1423 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1438 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
   case 73:
 #line 380 "parser.y"
                    { yylhs.value.as < int > () = -yystack_[0].value.as < int > (); }
-#line 1429 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1444 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
     break;
 
 
-#line 1433 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 1448 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
 
             default:
               break;
@@ -1996,7 +2011,7 @@ namespace yy {
 
 
 } // yy
-#line 2000 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
+#line 2015 "/home/theneonlightning/compilers/Mini-Java-Compiler/AbstractSyntaxTree/04-visitors/parser.cpp"
 
 #line 382 "parser.y"
 

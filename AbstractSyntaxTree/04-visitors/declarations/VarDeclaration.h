@@ -14,8 +14,9 @@ class VarDeclaration: public Declaration {
 
   std::string type;
   std::string identifier;
+  bool is_array;
 
-  VarDeclaration(const std::string& type, const std::string& identifier);
+  VarDeclaration(const std::pair<std::string, bool> type, const std::string& id);
   void Accept(Visitor* visitor) override;
 };
 
