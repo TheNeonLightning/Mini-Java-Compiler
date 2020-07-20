@@ -3,6 +3,8 @@
 * Variable can not be declared twice in the same scope
 * Tracing usage of undeclared variables
 * Implemented the type system
+
+
 (New files are in */symbol_table*, */object* and */visitor* dirrectories)
 ## Building the project
 ```
