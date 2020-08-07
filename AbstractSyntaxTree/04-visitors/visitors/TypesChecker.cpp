@@ -98,11 +98,17 @@ void TypesChecker::Visit(AssertStatement* statement) {
 }
 
 void TypesChecker::Visit(IfElseStatement* statement) {
+
+  statement->expr->Accept(this);
+
   statement->statement_true->Accept(this);
   statement->statement_false->Accept(this);
 }
 
 void TypesChecker::Visit(IfStatement* statement) {
+
+  statement->expr->Accept(this);
+
   statement->statement->Accept(this);
 }
 
@@ -143,6 +149,9 @@ void TypesChecker::Visit(SOPrintlnStatement* statement) {
 }
 
 void TypesChecker::Visit(WhileStatement* statement) {
+
+  statement->expr->Accept(this);
+
   statement->statement->Accept(this);
 }
 
